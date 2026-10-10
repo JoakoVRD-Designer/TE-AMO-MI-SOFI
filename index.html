@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8eee9">
+  <meta name="description" content="Un pequeño juego, seis mensajes y todo mi amor. Solo para Sofía, mi bebé.">
+  <meta property="og:title" content="Para Sofía, mi bebé ♡">
+  <meta property="og:description" content="Tengo una pequeña sorpresa para ti. Con todo mi amor, Joako.">
+  <meta property="og:type" content="website">
+  <title>Para Sofía, mi bebé ♡</title>
+  <link rel="icon" href="./assets/corazon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#inicio" aria-label="Joako y Sofía, volver al inicio">j <span>♡</span> s</a>
+    <span class="topbar-note">una cosita hecha para ti</span>
+    <span class="tiny-heart" aria-hidden="true">♥</span>
+  </header>
+
+  <main id="inicio">
+    <section class="gift-layout" aria-labelledby="welcome-title">
+      <div class="introduction">
+        <span class="eyebrow"><span aria-hidden="true">✳</span> PARA SOFÍA, Y NADIE MÁS</span>
+        <h1 id="welcome-title">Mi bebé,<br>tú haces todo <br><em>más bonito.</em></h1>
+        <p class="intro-copy">Quería regalarte un pedacito de lo que siento por ti. Así que escondí unos cuantos <strong>te quiero</strong> por aquí.</p>
+        <p class="handwritten">¿Los descubrimos juntos? <span aria-hidden="true">♡</span></p>
+        <div class="signature"><span class="signature-line" aria-hidden="true"></span> CON TODO MI AMOR, JOAKO</div>
+        <svg class="flower-doodle" viewBox="0 0 120 135" fill="none" aria-hidden="true">
+          <path d="M59 124c5-25 1-49 0-72m1 44c16 1 27-9 28-19-17-2-26 8-28 19Zm-1 10C44 108 32 98 29 88c16-4 27 6 30 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M57 48C28 68 20 40 39 33 22 9 50 1 57 23 75 1 96 19 78 34c26 7 14 32-9 18-3 19-21 17-12-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="59" cy="36" r="7" fill="currentColor" opacity=".18"/>
+        </svg>
+      </div>
+
+      <div class="game-wrap">
+        <div class="game-window">
+          <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>nuestro pequeño rincón</span><span aria-hidden="true">♡</span></div>
+          <section id="invitation" class="invitation" aria-labelledby="invitation-title">
+            <span class="postmark" aria-hidden="true">PARA MI<br><strong>BEBÉ</strong><span>♡</span></span>
+            <div class="envelope" aria-hidden="true">
+              <div class="envelope-letter"><span>Para Sofi</span><i>♡</i></div>
+              <div class="envelope-back"></div><div class="envelope-front"></div><div class="envelope-flap"></div><div class="envelope-seal">♥</div>
+            </div>
+            <p class="small-label">UNA SORPRESA CON TU NOMBRE</p>
+            <h2 id="invitation-title">Sofi, tengo algo<br>para decirte.</h2>
+            <p>Seis corazones. Seis maneras de recordarte<br>lo mucho que te amo.</p>
+            <button id="start-button" class="button button-primary" type="button">Abrir mi sorpresa <span aria-hidden="true">↗</span></button>
+            <span class="gentle-note">Sin prisa. Aquí siempre ganas.</span>
+          </section>
+
+          <section id="game" class="game" aria-labelledby="game-title" hidden>
+            <div class="game-heading"><div><p class="small-label">MIS TE QUIERO ESCONDIDOS</p><h2 id="game-title" tabindex="-1">Un corazón, un mensaje.</h2></div><span class="game-sparkle" aria-hidden="true">✳</span></div>
+            <p class="game-instruction">Toca cada corazón, mi bebé. Todos son para ti.</p>
+            <div id="heart-grid" class="heart-grid">
+              <button class="heart-button heart-peach" data-heart="0" type="button" aria-label="Descubrir el mensaje 1"><span class="heart-art" aria-hidden="true">♥</span><span class="heart-caption">un poquito de amor</span><span class="heart-check" aria-hidden="true">✓</span></button>
+              <button class="heart-button heart-rose" data-heart="1" type="button" aria-label="Descubrir el mensaje 2"><span class="heart-art" aria-hidden="true">♥</span><span class="heart-caption">y otro poquito</span><span class="heart-check" aria-hidden="true">✓</span></button>
+              <button class="heart-button heart-wine" data-heart="2" type="button" aria-label="Descubrir el mensaje 3"><span class="heart-art" aria-hidden="true">♥</span><span class="heart-caption">este también es tuyo</span><span class="heart-check" aria-hidden="true">✓</span></button>
+              <button class="heart-button heart-rose" data-heart="3" type="button" aria-label="Descubrir el mensaje 4"><span class="heart-art" aria-hidden="true">♥</span><span class="heart-caption">un abrazo escondido</span><span class="heart-check" aria-hidden="true">✓</span></button>
+              <button class="heart-button heart-wine" data-heart="4" type="button" aria-label="Descubrir el mensaje 5"><span class="heart-art" aria-hidden="true">♥</span><span class="heart-caption">algo que no te dije hoy</span><span class="heart-check" aria-hidden="true">✓</span></button>
+              <button class="heart-button heart-peach" data-heart="5" type="button" aria-label="Descubrir el mensaje 6"><span class="heart-art" aria-hidden="true">♥</span><span class="heart-caption">y todo mi corazón</span><span class="heart-check" aria-hidden="true">✓</span></button>
+            </div>
+            <div class="progress-area"><div class="progress-label"><span id="progress-text" role="status" aria-live="polite" aria-atomic="true">0 de 6 mensajes descubiertos</span><span aria-hidden="true">♡</span></div><div class="progress-track" role="progressbar" aria-label="Mensajes descubiertos" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><span id="progress-fill"></span></div></div>
+            <div id="letter-locked" class="letter-locked"><span aria-hidden="true">✉</span> Al descubrirlos todos, hay una carta para ti.</div>
+            <div id="letter-unlocked" class="letter-unlocked" hidden><p>Ya encontraste todos… pero todavía me queda algo por decirte.</p><button id="letter-button" class="button button-primary" type="button">Leer mi carta para ti <span aria-hidden="true">♡</span></button><button id="replay-button" class="text-button" type="button">Volver a descubrirlos</button></div>
+          </section>
+        </div>
+        <div class="under-window"><span aria-hidden="true">↳</span> un juego chiquitito. un amor grandote.</div>
+      </div>
+    </section>
+    <footer class="page-footer"><span>Joako <i aria-hidden="true">♡</i> Sofía</span><p>Si alguna vez lo olvidas, vuelve aquí: <strong>te amo, mi bebé.</strong></p><span class="footer-flower" aria-hidden="true">✳</span></footer>
+  </main>
+
+  <dialog id="message-dialog" class="love-dialog" aria-labelledby="message-title" aria-describedby="message-body">
+    <button class="dialog-close" data-close="message-dialog" type="button" aria-label="Cerrar mensaje">×</button>
+    <span id="message-number" class="small-label"></span><span class="dialog-heart" aria-hidden="true">♥</span><h2 id="message-title"></h2><p id="message-body"></p><span class="message-signature">Te amo, mi bebé. ♡</span><button class="button button-primary" data-close="message-dialog" type="button">Guardarlo en mi corazón <span aria-hidden="true">♡</span></button>
+  </dialog>
+
+  <dialog id="letter-dialog" class="love-dialog letter-dialog" aria-labelledby="letter-title">
+    <button class="dialog-close" data-close="letter-dialog" type="button" aria-label="Cerrar carta">×</button><span class="small-label">PARA LA PERSONA QUE YO ELIJO</span><h2 id="letter-title">Sofía, <em>mi bebé:</em></h2>
+    <div class="letter-copy"><p>Quería hacerte algo chiquitito, pero que tuviera mucho de nosotros. Algo que pudieras abrir y sentir: <em>«esto es solo para mí».</em> Porque sí, mi bebé, cada corazón de esta página es tuyo.</p><p>Te amo mucho. Me encanta tenerte en mi vida, pensarte durante el día y encontrar cualquier excusa para recordarte lo especial que eres para mí.</p><p>No necesito una fecha importante para decirte cosas bonitas. Quiero que sepas que te elijo, que me importas y que aquí tienes a alguien que quiere verte sonreír, escucharte y acompañarte.</p><p>Ojalá esta pequeña sorpresa te saque una sonrisa. Y cuando necesites un abrazo y no me tengas cerquita, puedes volver aquí. En cada mensaje te dejo un poquito del mío.</p><p class="letter-ending">Tú eres mi bebé.<br>Y yo te amo un montón.</p></div>
+    <div class="letter-signature">Con todo mi amor,<strong>Joako <span aria-hidden="true">♡</span></strong></div><button class="button button-primary" data-close="letter-dialog" type="button">Me quedo con este abrazo <span aria-hidden="true">♥</span></button>
+  </dialog>
+  <div id="confetti" class="confetti" aria-hidden="true"></div>
+  <noscript><p class="noscript-note">Mi bebé, te amo mucho. Activa JavaScript para descubrir los seis mensajes y tu carta. ♡</p></noscript>
+</body>
+</html>
