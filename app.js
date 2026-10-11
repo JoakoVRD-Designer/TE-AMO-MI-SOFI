@@ -2,12 +2,12 @@
 
 (() => {
   const messages = [
-    { name: 'Mi lugar bonito', title: 'Eres mi lugar bonito.', color: '#eaa0bd', body: 'Mi bebé, entre tantas cosas que pasan en un día, pensarte siempre me hace bien. Me encanta que estés en mi vida y que ese lugar tan especial tenga tu nombre: Sofía.' },
-    { name: 'Me gustas tú', title: 'Me encanta que seas tú.', color: '#f2c095', body: 'No necesitas hacer nada extraordinario para ser especial para mí. Me gusta tu forma de ser, me gusta conocerte un poquito más y me gusta poder decirte: mi bebé, te amo.' },
-    { name: 'Te elijo', title: 'Te elijo a ti.', color: '#c5b2e4', body: 'En los días bonitos y también en los que cuestan un poquito. Quiero escucharte, cuidarte y acompañarte. Porque tú me importas, Sofi. Muchísimo.' },
-    { name: 'Tu sonrisa', title: 'Tu sonrisa, mi debilidad.', color: '#f3c9d5', body: 'Si esta pequeña sorpresa te saca una sonrisa, ya me regalaste la parte más bonita del día. Ojalá pudiera estar cerquita para verla y darte un beso, mi bebé.' },
-    { name: 'Un abrazo mío', title: 'Aquí va un abrazo.', color: '#edcc87', body: 'Uno de esos abrazos en los que no hace falta decir nada. Para cuando me extrañes, para cuando estés cansadita o simplemente porque sí. Cierra los ojitos un segundo: este es para ti.' },
-    { name: 'Solo para ti', title: 'Todo esto es solo para ti.', color: '#da91b2', body: 'Este jardín tiene tu nombre, pero lo que de verdad lo llena eres tú. Ninguna flor está aquí por casualidad. Son seis maneras de decirte una misma cosa: te amo mucho, mi bebé.' },
+    { name: 'Mi bebé, mi calma', title: 'Eres mi calma, mi bebé.', color: '#eaa0bd', body: 'Pensarte me hace bien, mi bebé. Contigo me siento en casa.' },
+    { name: 'Me encantas, mi bebé', title: 'Me encantas, mi bebé.', color: '#f2c095', body: 'Me encantas tal como eres, mi bebé. Qué lindo tenerte en mi vida.' },
+    { name: 'Te elijo, mi bebé', title: 'Te elijo, mi bebé.', color: '#c5b2e4', body: 'Te elijo cada día, mi bebé. Quiero estar contigo.' },
+    { name: 'Tu sonrisa, mi bebé', title: 'Tu sonrisa, mi bebé.', color: '#f3c9d5', body: 'Tu sonrisa me alegra el día, mi bebé. Te daría un besito ahora mismo.' },
+    { name: 'Un abrazo, mi bebé', title: 'Te abrazo, mi bebé.', color: '#edcc87', body: 'Te abrazo fuerte, mi bebé. Quédate cerquita de mí.' },
+    { name: 'Para ti, mi bebé', title: 'Te amo, mi bebé.', color: '#da91b2', body: 'Todo esto es para ti, mi bebé. Te amo muchísimo.' },
   ];
   const $ = id => document.getElementById(id);
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -204,7 +204,7 @@
     const flowers = Math.floor(game.collected / 3);
     $('heart-count').textContent = game.collected;
     $('progress-detail').textContent = `${flowers} / 6`;
-    $('progress-text').textContent = game.collected === 18 ? 'Tu jardín está lleno de mis te quiero.' : game.collected ? `${flowers} ${flowers === 1 ? 'flor guarda' : 'flores guardan'} un mensaje para ti.` : 'Seis flores esperan por ti';
+    $('progress-text').textContent = game.collected === 18 ? 'Mi bebé, todo esto es tuyo.' : game.collected ? `${flowers} ${flowers === 1 ? 'flor' : 'flores'} para mi bebé.` : 'Unos te quiero para mi bebé.';
     $('progress-fill').style.width = `${game.collected / 18 * 100}%`;
     document.querySelector('.progress-track').setAttribute('aria-valuenow', game.collected);
     document.querySelectorAll('.flower-memory').forEach((button, index) => {
@@ -218,8 +218,8 @@
     $('game-controls').hidden = !game.started || game.collected >= 18;
     $('garden-scene').classList.toggle('is-playing', game.started && game.collected < 18);
     $('catch-button').disabled = game.paused || game.collected >= 18;
-    if (game.collected === 18) $('memories-hint').textContent = 'Todas son tuyas. Toca una flor cuando quieras volver a sentirme cerquita.';
-    else $('memories-hint').textContent = 'Se irán abriendo mientras juegas. Después, puedes volver a leerlas.';
+    if (game.collected === 18) $('memories-hint').textContent = 'Mi bebé, aquí puedes volver a leerlos.';
+    else $('memories-hint').textContent = 'Mi bebé, tus flores se abren al jugar.';
   }
 
   function openDialog(dialog) {
@@ -229,7 +229,7 @@
   }
 
   function openMessage(index) {
-    $('message-number').textContent = `Un te quiero que floreció para ti · ${index + 1} de 6`;
+    $('message-number').textContent = `Para mi bebé · ${index + 1} de 6`;
     $('message-title').textContent = messages[index].title; $('message-body').textContent = messages[index].body;
     $('message-flower').style.color = messages[index].color;
     openDialog($('message-dialog'));
@@ -242,7 +242,7 @@
     game.bounce = motion.matches ? 0 : 7;
     burst(drop.x, drop.y, drop.gold ? '#ffe7ad' : '#ffd0e2');
     sound.effect('pickup', game.collected);
-    toast(drop.gold ? 'Un besito extra, mi bebé.' : ['Este te quiero es tuyo.', 'Me encantas, Sofi.', 'Otro abrazo para mi bebé.', 'Te elijo. Siempre a ti.'][game.collected % 4]);
+    toast(drop.gold ? 'Un besito, mi bebé.' : ['Te quiero, mi bebé.', 'Me encantas, mi bebé.', 'Un abrazo, mi bebé.', 'Te elijo, mi bebé.'][game.collected % 4]);
     updateProgress();
     if (game.collected % 3 === 0) {
       const index = game.collected / 3 - 1;
@@ -361,7 +361,7 @@
   $('replay-button').addEventListener('click', () => {
     game.collected = 0; game.celebrated = false; game.hearts.length = 0; game.particles.length = 0; game.paused = false; game.player = game.target = 400; game.spawn = .5;
     storage.set(progressKey, 0); $('pause-card').hidden = true; $('confetti').replaceChildren(); updateProgress();
-    spawnHeart(true); void sound.begin(); canvas.focus({ preventScroll: true }); toast('Otro jardín de abrazos, solo para ti.');
+    spawnHeart(true); void sound.begin(); canvas.focus({ preventScroll: true }); toast('Más abrazos, mi bebé.');
   });
 
   messages.forEach((message, index) => {

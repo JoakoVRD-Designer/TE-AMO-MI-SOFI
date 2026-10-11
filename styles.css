@@ -143,7 +143,7 @@ body.has-dialog { overflow: hidden; }
   .topbar { position: sticky; top: 0; z-index: 4; margin: 0 20px; padding: 16px 0; background: #fbf3edf0; backdrop-filter: blur(12px); }.topbar-note { font-size: 9px; letter-spacing: .04em; }.sound-button { font-size: 10px; padding: 6px 11px; }
   main { padding: 0 20px; }.gift-layout { display: flex; flex-direction: column; gap: 25px; padding-top: 30px; padding-bottom: 31px; }
   .introduction { width: 100%; text-align: center; }.eyebrow { justify-content: center; font-size: 9px; gap: 8px; }.eyebrow > span { font-size: 17px; }
-  h1 { font-size: 49px; margin: 14px 0 15px; line-height: 1.04; } h1 br:nth-of-type(2) { display: none; }
+  h1 { font-size: 49px; margin: 14px 0 15px; line-height: 1.04; }
   .intro-copy { margin: 0 auto; max-width: 330px; font-size: 13px; line-height: 1.7; }.secondary-copy { margin-top: 8px; font-size: 11px; max-width: 300px; }
   .handwritten { font-size: 19px; margin: 16px 0; }.signature { justify-content: center; font-size: 8px; }.little-promise { display: none; }
   .garden-wrap { width: 100%; max-width: 580px; }.garden-window { border-radius: 17px; }.window-bar { height: 34px; padding: 0 14px; font-size: 9px; }.garden-scene { scroll-margin-top: 82px; }

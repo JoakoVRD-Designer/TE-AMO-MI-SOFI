@@ -1,6 +1,6 @@
-# Para Sofía, mi bebé ♡
+# Un regalo lindo para mi bebé ♡
 
-Una sorpresa de Joako para Sofía, su «mi bebé»: un jardín ilustrado con un conejito, corazones que caen, una melodía original de cajita de música y seis flores que guardan mensajes de amor. La carta original espera al terminar.
+Una sorpresa de Joako para Sofía mi bebé: un jardín ilustrado con un conejito, corazones que caen, una melodía original de cajita de música y seis flores que guardan mensajes cortitos de amor. La carta original espera al terminar.
 
 Mueve la cestita con el dedo, el ratón o las flechas para recoger corazones. También puedes tocar los corazones o usar Espacio / el botón de ayuda. Cada tres corazones florece un mensaje. No hay reloj, vidas ni penalización por dejar caer uno. Al recoger 18 se abre la carta; las flores permiten volver a leer cada mensaje.
 
